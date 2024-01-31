@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1 id="titulo">Isso é um título</h1>
+<div class="subtitulo">
+    <h2>Subtítulo</h2>
+</div>
+<div>
+    <input type="text" id="textoInput" placeholder="Input texto">
+    <button id="botao">Botão</button>
+</div>
+<div id="resultado"></div>
+
+<script>
+        document.getElementById('botao').addEventListener('click', function() {
+            var resultadoDiv = document.getElementById('resultado');
+            var textoDigitadoElement = document.getElementById('textoDigitado');
+            var textoClicadoElement = document.getElementById('textoClicado');
+
+            if (textoDigitadoElement) {
+                resultadoDiv.removeChild(textoDigitadoElement);
+            }
+
+            if (textoClicadoElement) {
+                resultadoDiv.removeChild(textoClicadoElement);
+            }
+
+            var novoElemento = document.createElement('p');
+            novoElemento.textContent = 'O botão foi clicado';
+            novoElemento.id = 'textoClicado';
+            resultadoDiv.appendChild(novoElemento);
+
+            var textoInput = document.getElementById('textoInput').value;
+            var novoElemento2 = document.createElement('p');
+
+            if (textoInput.trim() === '') {
+                novoElemento2.textContent = 'Você não digitou nada.';
+            } else {
+                novoElemento2.textContent = 'Você digitou: ' + textoInput;
+            }
+
+            novoElemento2.id = 'textoDigitado';
+            resultadoDiv.appendChild(novoElemento2);
+        });
+    </script>
+</body>
+</html>
