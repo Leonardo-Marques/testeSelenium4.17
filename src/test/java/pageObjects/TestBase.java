@@ -37,7 +37,12 @@ public class TestBase {
 
     @BeforeEach
     public void setUp(){
-        getDriver().get(DIR_PATH_HTML);
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("win")) {
+            getDriver().get(DIR_PATH_HTML);
+        } else {
+            getDriver().get("file://"+DIR_PATH_HTML);
+        }
     }
 
     @AfterEach
