@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.pages.HomePage;
+import utils.Waits;
 
 public class HomeTask {
     private WebDriver driver;
     private HomePage homePage;
 
-    private WebDriverWait wait;
     public HomeTask(WebDriver driver) {
         this.driver = driver;
         this.homePage = new HomePage(driver);
@@ -23,8 +23,7 @@ public class HomeTask {
     }
 
     public void clicarNoBotao() {
-        WebElement botao = homePage.getBotao();
-        botao.click();
+        homePage.getBotao().click();
     }
 
     public void validarTextoExibido(String textoEsperado) {

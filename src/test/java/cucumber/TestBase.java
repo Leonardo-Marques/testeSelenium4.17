@@ -1,4 +1,4 @@
-package pageObjects;
+package cucumber;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,9 +1,10 @@
-package pageObjects.testCases;
+package pageFactory.testCases;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pageObjects.TestBase;
-import pageObjects.tasks.HomeTask;
+import pageFactory.TestBase;
+import pageFactory.tasks.HomeTask;
+
 
 public class DigitaTextoTest extends TestBase {
     private WebDriver driver = this.getDriver();
