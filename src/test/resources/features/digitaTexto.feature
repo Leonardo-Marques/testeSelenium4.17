@@ -1,6 +1,6 @@
 #language: pt
 
-@WebSanity
+@Feature
 Funcionalidade: Digitar texto no input
 
   Contexto:
@@ -13,12 +13,6 @@ Funcionalidade: Digitar texto no input
     Entao Valido que exiba o texto "esse é meu texto"
 
   @Cenario2
-  Cenario: digito texto e clico no botao
-    Dado Digito o texto "esse é meu texto"
-    E clico no botao
-    Entao Valido que exiba o texto "esse nao é meu texto"
-
-  @Cenario3
   Esquema do Cenario: mesmo que cenario 1 porem com varivel
     Dado Digito o texto <texto>
     E clico no botao

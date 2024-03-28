@@ -1,10 +1,10 @@
 package cucumber.tasks;
 
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import pageFactory.pages.HomePage;
+import cucumber.pages.HomePage;
 
 public class HomeTask extends HomePage {
     private WebDriver driver;
@@ -23,6 +23,6 @@ public class HomeTask extends HomePage {
     }
 
     public void validarTextoExibido(String textoEsperado) {
-        Assertions.assertEquals("Você digitou: "+textoEsperado, txtExibido.getText());
+        Assert.assertEquals("Você digitou: "+textoEsperado, txtExibido.getText());
     }
 }
